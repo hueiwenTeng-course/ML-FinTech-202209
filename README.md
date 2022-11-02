@@ -1,4 +1,4 @@
-# Project
+# 以下是大家期末報告的組別與報告主題列表，請大家進入自己組別的folder進行編輯。
 # ML&FinTech : Project list 
 
 |Index|affiliation|Name|Topic|Motivation|
