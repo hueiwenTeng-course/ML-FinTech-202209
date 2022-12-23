@@ -122,6 +122,12 @@ $S_{t,i}$ denote the stock price at the $i$-th observation at day $t$.
 | ratio_D&S_Pledge         | 董監質押％                                    |
 
 ### EDA:
+
+### 樣本數
+Train   ：label=1 :  501 label=0 :  513
+Test    ：label=1 :  259 label=0 :  176
+All          ：label=1 :  760 label=0 :  689
+
 #### 1. Distribution Plot
 <!--實體K分布-->
 ![](https://i.imgur.com/Smo5LYL.png)
