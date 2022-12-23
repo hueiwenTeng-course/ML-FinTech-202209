@@ -123,13 +123,7 @@ $S_{t,i}$ denote the stock price at the $i$-th observation at day $t$.
 
 ### EDA:
 
-### 樣本數
 
-Train   ：label=1 :  501 label=0 :  513
-
-Test    ：label=1 :  259 label=0 :  176
-
-All          ：label=1 :  760 label=0 :  689
 
 #### 1. Distribution Plot
 <!--實體K分布-->
@@ -290,3 +284,11 @@ Sliding window train test split prediciton (Use 250-day historical to obtain a m
 ### Confusion matrix with dynamic-adjusted models:鑑別動態模型的好壞
 ![](https://i.imgur.com/pREuNt9.png)
 ![](https://i.imgur.com/S6EcYPz.png)
+
+### 樣本數
+
+Train   ：label=1 :  501 label=0 :  513
+
+Test    ：label=1 :  259 label=0 :  176
+
+All          ：label=1 :  760 label=0 :  689
