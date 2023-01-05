@@ -7,3 +7,18 @@
 ### 2. Data
 子表重複行項目（子表間對照的索引指標）
 ![](https://i.imgur.com/kvQgohx.png)
+子表內容（括號內表示行列數）：
+***CCBA***
+![](https://i.imgur.com/0qj8ZdU.png)
+***CDTX***
+![](https://i.imgur.com/hUzcTAZ.png)
+***CUSTINFO***
+![](https://i.imgur.com/NoBZrBx.png)
+***DP***
+![](https://i.imgur.com/H22KvJ2.png)
+***REMIT***
+![](https://i.imgur.com/eGImXTg.png)
+
+***ALERT DATE 及 Y***
+![](https://i.imgur.com/9ixd0U7.png)
+sar_flag=1 共233個，佔比0.97%。
