@@ -25,6 +25,7 @@ class SmaCross(Strategy):
             self.position.close()
             self.sell(size=1)
 
+# 回測單一技術指標
 def batch_test_idc(OHLC_backtesting,feature_test,y_test,name,plot=False):
     indic=["EMA","WMA","SMA","RSI","MACD","CCI","MTM","WILLR","KD","DMI"]
     accuracy_list=[]
@@ -83,6 +84,7 @@ def batch_test_idc(OHLC_backtesting,feature_test,y_test,name,plot=False):
     df_method = pd.DataFrame(table,index = indic)
     return df_method
 
+# 回測所有的model
 def batch_test_learn(OHLC_backtesting,X_train,X_test,y_train,y_test,
                 method,method_name,name,plot=False):
     score = []
