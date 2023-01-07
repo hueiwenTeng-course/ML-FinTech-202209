@@ -15,6 +15,7 @@ def tuning():
     grid={"C":np.logspace(-5,5,10)}# l1 lasso l2 ridge
     logreg_cv=RandomizedSearchCV(estimator=LogisticRegression(),
                                 param_distributions=grid, n_iter=20,verbose=0, n_jobs=-1)
+    
     #bagging
     param_distributions = {
         'base_estimator__max_depth' : tree_max_depth,
@@ -29,6 +30,7 @@ def tuning():
                 "max_depth"    : tree_max_depth}
     grad = RandomizedSearchCV(estimator=GradientBoostingClassifier(), 
                             param_distributions = parameters, n_iter=20,verbose=0, n_jobs=-1)
+    
     #rnd forest
     random_grid = {'bootstrap': [True, False],
                 'max_depth': tree_max_depth,
@@ -36,9 +38,9 @@ def tuning():
                 'min_samples_leaf': [1, 2, 4],
                 'min_samples_split': [2, 5, 10],
                 'n_estimators': [130, 180, 230]}
-
     rf_random = RandomizedSearchCV(estimator = RandomForestClassifier(), param_distributions = random_grid,
                                 n_iter=20,verbose=0, n_jobs=-1)
+    
     # XGboost
     n_estimators = [int(x) for x in np.linspace(start=200, stop=2000, num=10)]
     max_depth = np.arange(1,10)
@@ -50,6 +52,7 @@ def tuning():
                 'colsample_bytree': colsample_bytree}
     xg_random = RandomizedSearchCV(estimator = XGBClassifier(), param_distributions=random_grid,
                                 n_iter=20,verbose=0, n_jobs=-1)
+    
     #adaboost
     parameters = {
         'n_estimators': [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 20],
@@ -59,8 +62,8 @@ def tuning():
     }
     ada = RandomizedSearchCV(AdaBoostClassifier(DecisionTreeClassifier()), param_distributions=parameters
                             , n_iter=20,verbose=0, n_jobs=-1)
+    
     #svc
-
     grid_list = {"C": np.arange(2, 10, 2),
                 "gamma": np.arange(0.1, 1, 0.2)}
     svc = RandomizedSearchCV(svm.SVC(), param_distributions=grid_list, n_iter=20,verbose=0, n_jobs=-1)
@@ -70,7 +73,7 @@ def tuning():
                 'metric' : ['minkowski','euclidean','manhattan']}
     gs = RandomizedSearchCV(KNeighborsClassifier(), grid_params, n_iter=20,verbose = 0, n_jobs = -1)
 
-
+    #summary
     method_tuning = [logreg_cv,grad, bag,rf_random,
             ada, xg_random,svc, gs]
     method = [LogisticRegression(),GradientBoostingClassifier(), BaggingClassifier(),RandomForestClassifier(),
