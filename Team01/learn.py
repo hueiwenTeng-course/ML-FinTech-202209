@@ -2,6 +2,11 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+
+""" 
+confusion matrix
+"""
+
 def confusion(OHLC_hasFeature,feature_idx_sel,splitpoint,display=False):
     tp_train = np.zeros(10)
     fp_train = np.zeros(10)
@@ -70,6 +75,11 @@ def confusion(OHLC_hasFeature,feature_idx_sel,splitpoint,display=False):
     confusion_score.index = ["EMA","WMA","SMA","RSI","MACD","CCI","MTM","WILLR","KD","DMI"]
     # confusion_score
     return confusion_basic,confusion_score
+
+"""
+using loop to train all selected models
+"""
+
 
 def training(X_train,X_test,y_train,y_test,method,method_name):
     train_score= []
