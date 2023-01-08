@@ -159,22 +159,22 @@ SVM|$\begin{bmatrix}92 & 180 \\73 & 109\end{bmatrix}$|
 
 ## Conclusion
 #### 資料形式為price
-- **<font color="#f00">分類樹</font>在預測股票漲跌中，F1 Score為0.60038，為所有模型中表現最佳，且在<font color="#f00">預測為漲的準確度</font>高達0.70485，為為資料形式price模型中看漲最佳表現**
-- **<font color="#f00">分類樹</font>平均準確率為0.53084，為資料形式price模型中最佳表現**
-- **<font color="#f00">隨機森林</font>在<font color="#f00">看跌預測中準確度</font>為0.76，為所有資料形式price模型中看跌最佳表現，但漲預測準確度低，故總準確度僅為0.52203**
-- **<font color="#f00">XGboost</font>平均準確度為0.52863，僅次於分類樹模型(資料形式price)**
+- <font color="#f00">**分類樹**</font>在預測股票漲跌中，F1 Score為0.60038，為所有模型中表現最佳，且在<font color="#f00">**預測為漲的準確度**</font>高達0.70485，為為資料形式price模型中看漲最佳表現
+- <font color="#f00">**分類樹**</font>平均準確率為0.53084，為資料形式price模型中最佳表現
+- <font color="#f00">**隨機森林**</font>在<font color="#f00">**看跌預測中準確度**</font>為0.76，為所有資料形式price模型中看跌最佳表現，但漲預測準確度低，故總準確度僅為0.52203
+- <font color="#f00">**XGboost**</font>平均準確度為0.52863，僅次於分類樹模型(資料形式price)
 
 #### 資料形式為return
 
-- **<font color="#f00">分類樹</font>在預測股票漲跌中，F1 Score為0.56703，為所有資料形式return模型中表現最佳，且看漲與看跌機率差異不大(看跌:0.5545，看漲:0.56828)，平均優於其他模型**
-- **<font color="#f00">SVM</font>在<font color="#f00">看漲預測準確度</font>為0.619為所有資料形式return看漲中有最好表現**
-- **<font color="#f00">隨機森林</font>在<font color="#f00">看跌預測準中準確度</font>為0.85，為所有資料形式return看跌預測中表現最佳，但漲預測準確度低，故總準確度僅為0.53642**
-- **<font color="#f00">XGboost</font>平均準確度為0.56954，為所有資料形式return模型中最佳表現**
+- <font color="#f00">**分類樹**</font>在預測股票漲跌中，F1 Score為0.56703，為所有資料形式return模型中表現最佳，且看漲與看跌機率差異不大(看跌:0.5545，看漲:0.56828)，平均優於其他模型
+- <font color="#f00">**SVM**</font>在<font color="#f00">**看漲預測準確度**</font>為0.619為所有資料形式return看漲中有最好表現
+- <font color="#f00">**隨機森林**</font>在<font color="#f00">**看跌預測準中準確度**</font>為0.85，為所有資料形式return看跌預測中表現最佳，但漲預測準確度低，故總準確度僅為0.53642
+- <font color="#f00">**XGboost**</font>平均準確度為0.56954，為所有資料形式return模型中最佳表現
 #### 總結
-- **<font color="#f00">資料形式為return分類樹</font>在預測股票漲跌中有最佳預測表現**
-- **<font color="#f00">資料形式為return隨機森林</font>在看跌預測有最佳表現**
-- **<font color="#f00">資料形式為price分類樹</font>在看漲預測有最佳表現**
-- **不管資料形式price或return，<font color="#f00">分類樹與XGboost</font>皆有較佳平均準確度**
+- <font color="#f00">**資料形式為return分類樹**</font>在預測股票漲跌中有最佳預測表現
+- <font color="#f00">**資料形式為return隨機森林**</font>在看跌預測有最佳表現
+- <font color="#f00">**資料形式為price分類樹**</font>在看漲預測有最佳表現
+- 不管資料形式price或return，<font color="#f00">**分類樹與XGboost**</font>皆有較佳平均準確度
 
 #### 附註
 - 由於分類樹本身的預測是藉由「一連串的判斷，把input分配到樹中的某一個leaf node，並依據同個leaf node裡面比例最高類別當成預測」，故並沒有機率性質的預測，**故在此機率預測方法為：用以最終在的leaf node之中漲跌比率來當成預測的機率。**
