@@ -113,156 +113,18 @@ $x=(x_1,\ldots,x_{23})$, $p=23$. (此處已在Data的部分提及，故不再加
 
 ## 4. Analysis
 
-**<font color="#f00">特徵值只列出前10大權種</font>**
-
 ### 資料型態為return
-#### 分類樹模型
-##### 參數
-
-| 調整參數          | 範圍          | 最適化參數 |
-| ----------------- |:------------- | ---------- |
-|     max_depth     | 隨機(2~128)   |      16      |
-| min_samples_split | 隨機(2~128)   |       59    |
-| max_leaf_nodes    | 隨機(2~128)   |       54    |
-| criterion         | gini或entropy   |        gini    |
-| min_samples_leaf  | 隨機(2~128) |       4     |
-| random_state      | 4             |            |
-| n_trials          | 1000           |            |
-
-##### 混淆矩陣
-![](https://i.imgur.com/MeV884i.png)
-
-|          | 績效(未標準化)               |
-| ----------------- |:----------------------- |
-| Accuracy | 0.56512 |
-| F1 Score    | 0.56703 |
-| Recall         | 0.56828 |
-| Precision   | 0.56579 | 
-
-##### 特徵職權種
-![](https://i.imgur.com/7U9ZQ8Z.png)
-
-| 特徵值 | 百分比 |  低貢獻之特徵值   |  百分比   |
-| ------ |:------ | --- | --- |
-| 2308 vloume (thousand)   | 11    |   1503  |   0  |
-| MA20 | 10  |     |     |     |
-| slowk   | 8     |    |     |
-| slowd   | 6     |     |     |
-| SP500   | 6      |     |     |
-
----
-
-
-#### 隨機森林
-##### 參數
-| 調整參數          | 範圍          | 最適化參數 |
-| ----------------- |:------------- | ---------- |
-|     max_depth     | 隨機(2~128)   |      49      |
-| min_samples_split | 隨機(2~128)   |       26     |
-| max_leaf_nodes    | 隨機(2~128)   |        117    |
-| criterion         | gini或entropy   |        entropy   |
-| min_samples_leaf  | 隨機(2~128) |       3     |
-| max_features  | auto或sqrt |       sqrt     |
-| bootstrap  | True或False |       False     |
-| random_state      | 10             |            |
-| n_trials          | 100           |            |
-
-
-##### 混淆矩陣
-
-![](https://i.imgur.com/0srCAiP.png)
 
 
 
-|          | 績效(未標準化)               |
-| ----------------- |:----------------------- |
-| Accuracy | 0.53642 |
-| F1 Score    |0.31818 |
-| Recall         | 0.21586 |
-| Precision   |0.60494 | 
-
-##### 特徵值權重
-![](https://i.imgur.com/kXlSfBn.png)
-
-
-| 特徵值 | 百分比 |  低貢獻之特徵值   |  百分比   |
-| ------ |:------ | --- | --- |
-| 8183    | 6     |     |     |
-| slow| 5  |     |     |     |
-| slowk   | 5     |     |     |
-|  4721   | 5     |     |     |
-| 2308 investment credit (m)   | 5      |     |     |
-
-
----
-
-
-
-#### XGboost
-##### 參數
-
-| 調整參數          | 範圍          | 最適化參數 |
-| ----------------- |:------------- | ---------- |
-|     max_depth     | 隨機(2~128)   |      10      |
-| n_estimators | 隨機(10~200)   |       99     |
-| gamma    | 隨機(0~0.9)   |        0.3412    |
-| learning_rate         | 隨機(0.01~0.19)   |        0.1899    |
-| random_state      | 4            |            |
-| n_trials          | 300            |            |
-
-
-##### 混淆矩陣
-![](https://i.imgur.com/wUxbtKK.png)
-
-|          | 績效(未標準化)               |
-| ----------------- |:----------------------- |
-| Accuracy | 0.56954 |
-| F1 Score    | 0.49871 |
-| Recall         | 0.42731 |
-| Precision   |0.59877 | 
-
-##### 特徵值權重
-![](https://i.imgur.com/VFELkGS.png)
-
-| 特徵值(排序) | 百分比 |  無貢獻之特徵值   |  百分比   |
-| ------ |:------ | --- | --- |
-| 4721   |5     |     |    |
-| MA20   | 5    |     |     |
-| slowk   | 5     |    |    |
-| slowd    | 5     |    |     |
-| SP500   | 5      |     |     |
-
-
-
-
-#### SVM(支持向量機)
-**由於SVM於使用非線性核函數時為映射到高維度空間中，故無法計算特徵值權重大小**
-##### 參數
-| 調整參數          | 範圍          | 最適化參數 |
-| ----------------- |:------------- | ---------- |
-|     kernel     | rbf或sigmoid   |     sigmoid      |
-| C | 隨機(0.1~10)   |       0.127     |
-| gamma    | auto或scale   |        scale    |
-| random_state      | 4             |            |
-| n_trials          | 200            |            |
-
-
-
-
-##### 混淆矩陣
-![](https://i.imgur.com/4cUdJSA.png)
-
-|          | 績效(未標準化)               |
-| ----------------- |:----------------------- |
-| Accuracy | 0.49890 |
-| F1 Score    | 0.53388 |
-| Recall         | 0.61905 |
-| Precision   |0.46931 | 
-
+| Method | Confusion matrix | 
+| ------ | ---------------- | 
+|分類樹|$\begin{bmatrix}127 & 99 \\98 & 129\end{bmatrix}$| 
+隨機森林 |$\begin{bmatrix}194 & 32 \\178 & 49\end{bmatrix}$|
+XGboost|$\begin{bmatrix}161 & 65 \\130 & 97\end{bmatrix}$|
+SVM|$\begin{bmatrix}96 & 147 \\80 & 130\end{bmatrix}$|
 
 ### 總結
-
-
 #### 模型比較
 | 績效 | 分類樹 |  隨機森林   |  XGboost   |SVM   |
 | ------ |:------ | --- | --- | --- |
@@ -271,154 +133,20 @@ $x=(x_1,\ldots,x_{23})$, $p=23$. (此處已在Data的部分提及，故不再加
 | Recall   |   0.56828   |0.21586   |   0.42731 |**0.61905**|
 | Precision   | 0.56579     | **0.60494**   |  0.59877  |0.46931|
 
+
 ### 資料型態為price
-#### 分類樹
-##### 參數
 
-| 調整參數          | 範圍          | 最適化參數 |
-| ----------------- |:------------- | ---------- |
-|     max_depth     | 隨機(2~128)   |      107      |
-| min_samples_split | 隨機(2~128)   |       37     |
-| max_leaf_nodes    | 隨機(2~128)   |        102    |
-| criterion         | gini或entropy   |       gini    |
-| min_samples_leaf  | 隨機(2~128) |       13     |
-| random_state      | 4             |            |
-| n_trials          | 1000          |            |
-
-##### 混淆矩陣
-![](https://i.imgur.com/tsH9Vz2.png)
-
-
-|          | 績效              |
-| ----------------- |:----------------------- |
-| Accuracy | 0.53084|
-| F1 Score    | 0.60038 |
-| Recall         | 0.70485 |
-| Precision   | 0.52288 | 
-
-##### 特徵職權種
-![](https://i.imgur.com/cVHZEA1.png)
-
-| 特徵值 | 百分比 |  低貢獻之特徵值   |  百分比   |
-| ------ |:------ | --- | --- |
-| 2308 dealer (m)    | 11    |     |     |
-| slowk | 10  |      |     |     |
-| 2360   | 9   |     |    |
-| 2308 investment credit (m)   | 9     |     |     |
-| 2308 vloume (thousand)   | 8      |     |     |
-
-#### 隨機森林
-##### 參數
-| 調整參數          | 範圍          | 最適化參數 |
-| ----------------- |:------------- | ---------- |
-|     max_depth     | 隨機(2~128)   |     24      |
-| min_samples_split | 隨機(2~128)   |       72     |
-| max_leaf_nodes    | 隨機(2~128)   |        68    |
-| criterion         | gini或entropy   |       gini   |
-| min_samples_leaf  | 隨機(2~128) |       2     |
-| max_features  | auto或sqrt |       sqrt     |
-| bootstrap  | True或False |       False     |
-| random_state      | 10             |            |
-| n_trials          | 100            |            |
-
-
-##### 混淆矩陣
-![](https://i.imgur.com/waBVhmG.png)
-
-
-
-|          | 績效               |
-| ----------------- |:----------------------- |
-| Accuracy | 0.52203 |
-| F1 Score    |0.36735 |
-| Recall         | 0.27753 |
-| Precision   | 0.54310 | 
-
-##### 特徵值權重
-![](https://i.imgur.com/dpJo8Qr.png)
-
-
-
-| 特徵值 | 百分比 |  低貢獻之特徵值   |  百分比   |
-| ------ |:------ | --- | --- |
-| slowk   | 9     |     |     |
-| 2308 dealer (m)| 6  |     |     |     |
-| 2308 investment credit (m)    | 6     |     |     |
-| 2308 vloume (thousand)    | 6     |     |     |
-| 4721   | 5      |     |     |
-
-#### XGboost
-##### 參數
-
-| 調整參數          | 範圍          | 最適化參數 |
-| ----------------- |:------------- | ---------- |
-|     max_depth     | 隨機(2~128)   |      41      |
-| n_estimators | 隨機(10~200)   |       13     |
-| gamma    | 隨機(0~0.9)   |         0.4864    |
-| learning_rate         | 隨機(0.01~0.19)   |        0.0133    |
-| random_state      | 4            |            |
-| n_trials          | 100            |            |
-
-
-##### 混淆矩陣
-![](https://i.imgur.com/blG40hU.png)
-
-
-|          | 績效(未標準化)               |
-| ----------------- |:----------------------- |
-| Accuracy | 0.52863 |
-| F1 Score    | 0.50233 |
-| Recall         | 0.47577 |
-| Precision   |0.53202 | 
-
-##### 特徵值權重
-![](https://i.imgur.com/rbpLsN6.png)
-
-
-| 特徵值(排序) | 百分比 |  無貢獻之特徵值   |  百分比   |
-| ------ |:------ | --- | --- |
-| 1537   |5     |     |    |
-| MACD   | 5    |     |     |
-| slowk   | 5     |    |    |
-| 1723   | 5     |    |     |
-| 4721   | 5      |     |     |
-
-#### SVM(支持向量機)
-**由於SVM於使用非線性核函數時為映射到高維度空間中，故無法計算特徵值權重大小**
-##### 參數
-| 調整參數          | 範圍          | 最適化參數 |
-| ----------------- |:------------- | ---------- |
-|     kernel     | rbf或sigmoid   |     sigmoid      |
-| C | 隨機(0.1~10)   |       0.131     |
-| gamma    | auto或scale   |        scale    |
-| random_state      | 4             |            |
-| n_trials          | 100            |            |
+| Method | Confusion matrix | 
+| ------ | ---------------- | 
+|分類樹|$\begin{bmatrix}81 & 146 \\67 & 160\end{bmatrix}$| 
+隨機森林 |$\begin{bmatrix}174 & 53 \\164 & 63\end{bmatrix}$|
+XGboost|$\begin{bmatrix}132 & 95 \\119 & 108\end{bmatrix}$|
+SVM|$\begin{bmatrix}92 & 180 \\73 & 109\end{bmatrix}$|
 
 
 
 
-##### 混淆矩陣
-![](https://i.imgur.com/lawP4IB.png)
-
-
-|          | 績效(未標準化)               |
-| ----------------- |:----------------------- |
-| Accuracy | 0.44273 |
-| F1 Score    | 0.46285 |
-| Recall         | 0.59890 |
-| Precision   |0.37716 | 
-
-
-#### 附註
-![](https://i.imgur.com/drjrMLM.png)
-**準確度(Accuracy) = (TP+TN)/(TP+FP+FN+TN)**
-**精確度(Precision) = TP/(TP+FP)**
-**召回率(Recall) = TP/(TP+FN)**
-![](https://i.imgur.com/KvOxCrC.png)
-
----
-
-## 績效比較
+## 模型比較
 
 
 | 績效 | 分類樹 |  隨機森林   |  XGboost   | SVM   |
@@ -427,6 +155,30 @@ $x=(x_1,\ldots,x_{23})$, $p=23$. (此處已在Data的部分提及，故不再加
 | F1 Score  | **0.60038** | 0.36735                               | 0.50233 |     0.46285 |     |
 | Recall    | **0.70485** | 0.27753                               |0.47577 |     0.59890 |     |
 | Precision | 0.52288                               | **0.54310** |  0.53202 |    0.37716|
+
+
+## Conclusion
+#### 資料形式為price
+- **<font color="#f00">分類樹</font>在預測股票漲跌中，F1 Score為0.60038，為所有模型中表現最佳，且在<font color="#f00">預測為漲的準確度</font>高達0.70485，為為資料形式price模型中看漲最佳表現**
+- **<font color="#f00">分類樹</font>平均準確率為0.53084，為資料形式price模型中最佳表現**
+- **<font color="#f00">隨機森林</font>在<font color="#f00">看跌預測中準確度</font>為0.76，為所有資料形式price模型中看跌最佳表現，但漲預測準確度低，故總準確度僅為0.52203**
+- **<font color="#f00">XGboost</font>平均準確度為0.52863，僅次於分類樹模型(資料形式price)**
+
+#### 資料形式為return
+
+- **<font color="#f00">分類樹</font>在預測股票漲跌中，F1 Score為0.56703，為所有資料形式return模型中表現最佳，且看漲與看跌機率差異不大(看跌:0.5545，看漲:0.56828)，平均優於其他模型**
+- **<font color="#f00">SVM</font>在<font color="#f00">看漲預測準確度</font>為0.619為所有資料形式return看漲中有最好表現**
+- **<font color="#f00">隨機森林</font>在<font color="#f00">看跌預測準中準確度</font>為0.85，為所有資料形式return看跌預測中表現最佳，但漲預測準確度低，故總準確度僅為0.53642**
+- **<font color="#f00">XGboost</font>平均準確度為0.56954，為所有資料形式return模型中最佳表現**
+#### 總結
+- **<font color="#f00">資料形式為return分類樹</font>在預測股票漲跌中有最佳預測表現**
+- **<font color="#f00">資料形式為return隨機森林</font>在看跌預測有最佳表現**
+- **<font color="#f00">資料形式為price分類樹</font>在看漲預測有最佳表現**
+- **不管資料形式price或return，<font color="#f00">分類樹與XGboost</font>皆有較佳平均準確度**
+
+#### 附註
+- 由於分類樹本身的預測是藉由「一連串的判斷，把input分配到樹中的某一個leaf node，並依據同個leaf node裡面比例最高類別當成預測」，故並沒有機率性質的預測，**故在此機率預測方法為：用以最終在的leaf node之中漲跌比率來當成預測的機率。**
+- 由於SVM是藉由每個點對Decision Boundary的位置，故以離Decision Boundary越近，我們模型的信心越低，離Decision Boundary越遠，我們模型的信心越高為概念，**在SVM結果加入Sigmoid**，將原本不具備機率性質的預測轉換為符合機率的公理
 
 
 ## 交易策略
