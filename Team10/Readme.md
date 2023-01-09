@@ -8,7 +8,7 @@
 
 我們希望能透過玉山銀行提供去識別化後的顧客帳戶交易等資料，再加以我們上課學習到的機器學習方法建立模型，來降低洗錢可疑活動的誤報率。
 
-![](https://i.imgur.com/OAt4H2N.jpg =500x)
+![](https://i.imgur.com/OAt4H2N.jpg)
 
 
 ## 2. Data 
@@ -147,7 +147,7 @@ SAR=0-->分開做EDA;
 
 | SAR=0                                      | SAR=1                                      |
 | ------------------------------------------ |:------------------------------------------ |
-| ![](https://i.imgur.com/3xvruR7.png =150x) | ![](https://i.imgur.com/IzQ9sWn.png =150x) |
+| ![](https://i.imgur.com/3xvruR7.png) | ![](https://i.imgur.com/IzQ9sWn.png) |
 
 :::info
 1. 沒洗錢的主要國別為130（台灣）佔比高達82%
@@ -158,7 +158,7 @@ SAR=0-->分開做EDA;
 
 | SAR=0 | SAR=1 |
 | --- | --- |
-| ![](https://i.imgur.com/EjRkE91.png =150x) | ![](https://i.imgur.com/UI0RETq.png =150x)|
+| ![](https://i.imgur.com/EjRkE91.png) | ![](https://i.imgur.com/UI0RETq.png)|
 | ![](https://i.imgur.com/DQ0ykRF.png) | ![](https://i.imgur.com/psu3po0.png) |
 
 :::info
@@ -171,8 +171,8 @@ SAR=0-->分開做EDA;
  
 | SAR=0                                 | SAR=1                                 |
 | ------------------------------------- |:------------------------------------- |
-| ![](https://i.imgur.com/YNiy5l3.png =150x ) | ![](https://i.imgur.com/LGZWcTf.png =150x ) |
-| ![](https://i.imgur.com/K4sSS27.png =500x)  | ![](https://i.imgur.com/JLqZM7R.png =500x)  |
+| ![](https://i.imgur.com/YNiy5l3.png) | ![](https://i.imgur.com/LGZWcTf.png) |
+| ![](https://i.imgur.com/K4sSS27.png)  | ![](https://i.imgur.com/JLqZM7R.png)  |
 
 :::info
 1. 風險等級的順序的排序並未有差異，但可以看到風險等級1的客戶，在有洗錢的部分提高至88.4%，比例變相當的高
@@ -184,7 +184,7 @@ SAR=0-->分開做EDA;
 
 | SAR=0 | SAR=1 |
 | --- | --- |
-| ![](https://i.imgur.com/ZPEocLC.png =150x) | ![](https://i.imgur.com/Lt3hdY9.png =150x) |
+| ![](https://i.imgur.com/ZPEocLC.png) | ![](https://i.imgur.com/Lt3hdY9.png) |
 | ![](https://i.imgur.com/1DEbuhj.png) | ![](https://i.imgur.com/X44c4iC.png) |
 
 :::info
@@ -196,7 +196,7 @@ SAR=0-->分開做EDA;
 
 | SAR=0 | SAR=1 |
 | --- | --- |
-| ![](https://i.imgur.com/BLO7dH4.png =150x) | ![](https://i.imgur.com/MbNkXL6.png =130x) |
+| ![](https://i.imgur.com/BLO7dH4.png) | ![](https://i.imgur.com/MbNkXL6.png) |
 | ![](https://i.imgur.com/Y2ETyGV.png) | ![](https://i.imgur.com/BlbD316.png) |
 
 :::info
@@ -209,7 +209,7 @@ SAR=0-->分開做EDA;
 
 | SAR=0 | SAR=1 |
 | --- | --- |
-| ![](https://i.imgur.com/Ro63MIs.png =150x) | ![](https://i.imgur.com/VaBrZJx.png =150x) |
+| ![](https://i.imgur.com/Ro63MIs.png) | ![](https://i.imgur.com/VaBrZJx.png) |
 | ![](https://i.imgur.com/MHEph8K.png) | ![](https://i.imgur.com/18hSes4.png) |
 
 :::info
