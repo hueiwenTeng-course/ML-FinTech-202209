@@ -22,7 +22,7 @@ Insights:
 - 有交易行為的檔案：cdtx, dp, remit
 
 ### Dataset description
-==ccba== : 
+- ccba : 
 
 1. The number of rows and columns : (59075, 10)
 2. The number of customers : 4745
@@ -40,7 +40,7 @@ Insights:
 | cucsm     | 本月消費金額       | Numerical   | 經神秘轉換                         |
 | cucash    | 本月借現金額       | Numerical   | 經神秘轉換                         |
 
-==cdtx 信用卡消費記錄== : 
+- cdtx 信用卡消費記錄 : 
 
 1. The number of rows and columns : (1043014, 5)
 2. The number of customers : 3945
@@ -53,7 +53,7 @@ Insights:
 | cur_type  | 消費地幣別    | Categorical | 經神秘轉換，（47＝台幣）           |
 | amt       | 交易金額-台幣 | Numerical   | 經神秘轉換                         |
 
-==custinfo== : 
+- custinfo : 
 
 1. The number of rows and columns : (25751, 6)
 2. The number of customers : 7708
@@ -68,7 +68,7 @@ Insights:
 | total_asset     | 行內總資產 | Numerical   | 經神秘轉換 |
 | AGE             | 年齡       | Categorical |            |
 
-==dp 存錢與轉帳紀錄== : 
+- dp 存錢與轉帳紀錄 : 
 
 1. The number of rows and columns : (1969818, 12)
 2. The number of customers : 6196
@@ -89,7 +89,7 @@ Insights:
 | ATM             | 是否為實體ATM交易 | Categorical | (0=非實體ATM交易;1=實體ATM交易)                                   |
 
 
-==remit 外匯紀錄== : 
+- remit 外匯紀錄 : 
 
 1. The number of rows and columns : (17167, 4)
 2. The number of customers : 1144
@@ -101,7 +101,7 @@ Insights:
 | trans_no         | 交易編號             | Categorical | 經神秘轉換，代表不同的匯出方式     |
 | trade_amount_usd | 交易金額             | Numerical   | 經神秘轉換                         |
 
-==alert_time== : 
+- alert_time : 
 - public_x_alert_date :
 1. The number of rows and columns : (1845, 2)
 2. The number of alert key : 1845
@@ -114,7 +114,7 @@ Insights:
 | alert_key | alert主鍵         |             |                                    |
 | date      | alert主鍵發生日期 | Categorical | 經神秘轉換，數字序列有前後順序意義 |
 
-==y== : 
+- y : 
 
 1. The number of rows and columns : (23906, 2)
 2. The number of alert key : 23906
@@ -141,7 +141,7 @@ SAR=0-->分開做EDA;
 
 ### SAR=0 v.s. SAR=1
 
-- **Dataset : ==cdtx==**
+- **Dataset : cdtx**
 
 1. $country$
 
@@ -166,7 +166,7 @@ SAR=0-->分開做EDA;
 2. 有洗錢由幣別46為大宗，佔比來到37.8%，相較於他在沒洗錢時的比例2.9%相差懸殊
 :::
 
-- **Dataset : ==custinfo==**
+- **Dataset : custinfo**
 1. $risk\_rank$
  
 | SAR=0                                 | SAR=1                                 |
@@ -179,7 +179,7 @@ SAR=0-->分開做EDA;
 2. 沒洗錢的時候有風險等級0的客戶，但在有洗錢時，風險等級0的客戶完全沒有
 :::
 
-- **Dataset : ==dp==** 
+- **Dataset : dp** 
 1. $ATM$
 
 | SAR=0 | SAR=1 |
@@ -192,7 +192,7 @@ SAR=0-->分開做EDA;
 2. 有洗錢的很大比例都是使用ATM，不是使用ATM的僅有12.9%
 :::
 
-2. $info\_asset\_code$
+2. $info\ asset\ code$
 
 | SAR=0 | SAR=1 |
 | --- | --- |
@@ -203,7 +203,7 @@ SAR=0-->分開做EDA;
 1. 在資訊資產代碼中，代碼13的在沒洗錢時佔比約47%，而有洗錢的時候提高到62.5%，提高蠻多
 :::
 
-- **Dataset : ==remit==**
+- **Dataset : remit**
 
 1. $trans\_no$
 
@@ -312,11 +312,11 @@ confusion matrix : column預測, row實際
 - 變數缺值的部分維持原本的數值
 - 類別變數的部分填0，代表無缺值
 :::
-==one hot encoding==:
+- one hot encoding:
 Convert 'occupation','risk_rank', 'AGE' to a binary matrix
-==pd.crosstab==:
+- pd.crosstab:
 計算'cur_type','tx_type','trans_no'各類別的次數
-==MinMaxScaler==
+- MinMaxScaler
 #### 合併後資料格式
 
 
