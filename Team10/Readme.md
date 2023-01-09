@@ -149,10 +149,11 @@ SAR=0-->分開做EDA;
 | ------------------------------------------ |:------------------------------------------ |
 | ![](https://i.imgur.com/3xvruR7.png) | ![](https://i.imgur.com/IzQ9sWn.png) |
 
-:::info
+- Insight:
 1. 沒洗錢的主要國別為130（台灣）佔比高達82%
 2. 沒洗錢的國別134佔比僅1.6%，而有洗錢的國別134飆升至54%
-:::
+
+
 
 2. $cur\_type$
 
@@ -161,10 +162,11 @@ SAR=0-->分開做EDA;
 | ![](https://i.imgur.com/EjRkE91.png) | ![](https://i.imgur.com/UI0RETq.png)|
 | ![](https://i.imgur.com/DQ0ykRF.png) | ![](https://i.imgur.com/psu3po0.png) |
 
-:::info
+- Insight:
 1. 沒洗錢的主要幣別為47（台幣），高達91.9%，但在有洗錢的時候，下降至第二高並且只有佔27%
 2. 有洗錢由幣別46為大宗，佔比來到37.8%，相較於他在沒洗錢時的比例2.9%相差懸殊
-:::
+
+
 
 - **Dataset : custinfo**
 1. $risk\_rank$
@@ -174,10 +176,11 @@ SAR=0-->分開做EDA;
 | ![](https://i.imgur.com/YNiy5l3.png) | ![](https://i.imgur.com/LGZWcTf.png) |
 | ![](https://i.imgur.com/K4sSS27.png)  | ![](https://i.imgur.com/JLqZM7R.png)  |
 
-:::info
+- Insight:
 1. 風險等級的順序的排序並未有差異，但可以看到風險等級1的客戶，在有洗錢的部分提高至88.4%，比例變相當的高
 2. 沒洗錢的時候有風險等級0的客戶，但在有洗錢時，風險等級0的客戶完全沒有
-:::
+
+
 
 - **Dataset : dp** 
 1. $ATM$
@@ -187,10 +190,10 @@ SAR=0-->分開做EDA;
 | ![](https://i.imgur.com/ZPEocLC.png) | ![](https://i.imgur.com/Lt3hdY9.png) |
 | ![](https://i.imgur.com/1DEbuhj.png) | ![](https://i.imgur.com/X44c4iC.png) |
 
-:::info
+- Insight:
 1. 沒洗錢的資料使用ATM的佔比為75.6%，而在有洗錢的資料中使用ATM的佔比提高到87%
 2. 有洗錢的很大比例都是使用ATM，不是使用ATM的僅有12.9%
-:::
+
 
 2. $info\ asset\ code$
 
@@ -199,9 +202,10 @@ SAR=0-->分開做EDA;
 | ![](https://i.imgur.com/BLO7dH4.png) | ![](https://i.imgur.com/MbNkXL6.png) |
 | ![](https://i.imgur.com/Y2ETyGV.png) | ![](https://i.imgur.com/BlbD316.png) |
 
-:::info
+- Insight:
 1. 在資訊資產代碼中，代碼13的在沒洗錢時佔比約47%，而有洗錢的時候提高到62.5%，提高蠻多
-:::
+
+
 
 - **Dataset : remit**
 
@@ -212,10 +216,10 @@ SAR=0-->分開做EDA;
 | ![](https://i.imgur.com/Ro63MIs.png) | ![](https://i.imgur.com/VaBrZJx.png) |
 | ![](https://i.imgur.com/MHEph8K.png) | ![](https://i.imgur.com/18hSes4.png) |
 
-:::info
+- Insight:
 1. 可以發現在沒洗錢的部分，交易編號2雖然只有佔比0.7%，但在沒洗錢的部分，則是完全沒有
 2. 交易編號0的在沒洗錢是佔比66%，到了有洗錢的部分飆升至93.5%，可見洗錢的交易編碼大多是0
-:::
+
 
 ## 3. Formulation
 
