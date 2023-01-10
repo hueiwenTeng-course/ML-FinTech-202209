@@ -21,11 +21,12 @@
  
 ## Analysis
 
- **Wordcloud**
+ **文字雲**
  ![image](https://github.com/Bellayao06/text-assistant/blob/main/%E6%88%AA%E5%9C%96%202023-01-10%20%E4%B8%8B%E5%8D%882.31.46.png)
  
-  **Wordcloud**
- ![image](https://github.com/Bellayao06/text-assistant/blob/main/%E6%88%AA%E5%9C%96%202023-01-10%20%E4%B8%8B%E5%8D%882.31.28.png)
+  **摘要**
+ ![image]([https://github.com/Bellayao06/text-assistant/blob/main/%E6%88%AA%E5%9C%96%202023-01-10%20%E4%B8%8B%E5%8D%882.31.28.png](https://github.com/Bellayao06/text-assistant/blob/main/%E6%88%AA%E5%9C%96%202023-01-10%20%E4%B8%8B%E5%8D%882.34.32.png))
 
 ## Conclusion
-[Keynote](https://www.icloud.com/keynote/0caWZoE8Bbg7Ig90vMGeDaduw#20221013_Ten_Yao_line_assistant)
+
+在 Formulation 中最重要的是文字前處理，尤其 LINE 訊息參雜著閒聊、日常用語，藉由英文停用表精進繁體中文停用表，或者經收集聊天記錄，發展出「LINE」停用表，可以更好摘要LINE的聊天訊息。而摘要的方式，需要更深入的了解，讓整理模型結果的過程有理論依據。更詳細的研究過程可參考[Keynote](https://www.icloud.com/keynote/0caWZoE8Bbg7Ig90vMGeDaduw#20221013_Ten_Yao_line_assistant)
