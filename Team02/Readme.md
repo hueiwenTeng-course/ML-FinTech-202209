@@ -29,4 +29,4 @@
 
 ## Conclusion
 
-在 Formulation 中最重要的是文字前處理，尤其 LINE 訊息參雜著閒聊、日常用語，藉由英文停用表精進繁體中文停用表，或者經收集聊天記錄，發展出「LINE」停用表，可以更好摘要LINE的聊天訊息。而摘要的方式，需要更深入的了解，讓整理模型結果的過程有理論依據。更詳細的研究過程可參考[Keynote](https://www.icloud.com/keynote/0caWZoE8Bbg7Ig90vMGeDaduw#20221013_Ten_Yao_line_assistant)
+在 Formulation 中最重要的是文字前處理，尤其 LINE 訊息參雜著閒聊、日常用語，藉由英文停用表精進繁體中文停用表，或者經收集聊天記錄，發展出「LINE」停用表，可以更好摘要LINE的聊天訊息。而摘要的方式，需要更深入的了解，讓整理模型結果的過程有理論依據。更詳細的研究過程可參考[Keynote](https://www.icloud.com/keynote/0caWZoE8Bbg7Ig90vMGeDaduw#20221013_Ten_Yao_line_assistant)。
